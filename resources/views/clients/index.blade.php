@@ -23,17 +23,17 @@
             <th>Last Name</th>
             <th>Contact Number</th>
             <th>Tin</th>
-            <th>Company</th>
+            <th>Email</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($clients as $client)
             <tr>
-                <td>{{ ++$i }}</td>
+                <td>{{ $client->id }}</td>
                 <td>{{ $client->fname }}</td>
                 <td>{{ $client->lname }}</td>
                 <td>{{ $client->contactno }}</td>
                 <td>{{ $client->client_tin}}</td>
-                <td>{{ $client->client_company }}</td>
+                <td>{{ $client->client_email}}</td>
                 
                 <td>
                     <form action="{{ route('clients.destroy', $client->id) }}" method="POST">
@@ -62,7 +62,7 @@
 
     {!! $clients->links() !!}
     <center>
-                <a class="btn btn-success" href="{{ route('clients.create') }}" title="Create a project"> <i class="fas fa-plus-circle"></i>
+                <a class="btn btn-success" href="{{ route('clients.create') }}" title="Add client"> <i class="fas fa-plus-circle"></i>
                     </a>
         
 

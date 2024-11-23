@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Project</h2>
+                <h2>Update Client Information</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('clients.index') }}" title="Go back"> <i
@@ -24,7 +24,7 @@
         </div>
     @endif
 
-    <form action="{{ route('clients.update', $client->id) }}" method="POST">
+    <form action="{{ route('clients.index', $client->client) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -58,11 +58,11 @@
             </div> 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Company</strong>
-                    <input type="text" name="client_company" class="form-control" 
-                        value="{{ $client->client_company}}">
+                    <strong>Email</strong>
+                    <input type="text" name="client_tin" class="form-control" 
+                        value="{{ $client->client_email}}">
                 </div>
-            </div> 
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>

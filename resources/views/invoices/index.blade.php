@@ -18,7 +18,7 @@
 
     <table class="table table-bordered table-responsive-lg">
         <tr>
-            <th>No</th>
+            <th>Invoice Number</th>
             <th>Name</th>
             <th>Description</th>
             <th>Total Due</th>
@@ -27,7 +27,7 @@
         </tr>
         @foreach ($invoices as $invoice)
             <tr>
-                <td>{{ ++$i }}</td>
+                <td>{{ $invoice->id }}</td>
                 <td>{{ $invoice->name }}</td>
                 <td>{{ $invoice->description }}</td>
                 <td>{{ $invoice->TotalDue }}</td>

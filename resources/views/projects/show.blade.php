@@ -20,14 +20,14 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
-                {{ $project->name }}
+                <strong>Title:</strong>
+                {{ $project->title}}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Introduction:</strong>
-                {{ $project->introduction }}
+                <strong>Client ID:</strong>
+                {{ $project->clientID }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -48,5 +48,11 @@
                 {{ date_format($project->created_at, 'jS M Y') }}
             </div>
         </div>
+
     </div>
+
+    <div class="pull-right">
+        <a class="btn btn-success" href="{{ route('projects.create.invoice') }}" title="Create invoice"> <i class="fas fa-plus-circle"></i>
+            </a>
+</div>
 @endsection

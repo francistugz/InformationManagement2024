@@ -42,20 +42,19 @@ class ClientsController extends Controller
             'fname' => 'required',
             'lname' => 'required',
             'contactno' => 'required',
-            'client_tin' => 'required',
-            'client_company' => 'required',
+            'client_tin' => 'required'
         ]);
 
         Clients::create($request->all());
 
         return redirect()->route('clients.index')
-            ->with('success', 'Project created successfully.');
+            ->with('success', 'Client details added successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $clientID
      * @return \Illuminate\Http\Response
      */
     public function show(Clients $client)
@@ -66,7 +65,7 @@ class ClientsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $clientID
      * @return \Illuminate\Http\Response
      */
     public function edit(Clients $client)
@@ -78,7 +77,7 @@ class ClientsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $clientID
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Clients $client)
@@ -87,19 +86,18 @@ class ClientsController extends Controller
             'fname' => 'required',
             'lname' => 'required',
             'contactno' => 'required',
-            'client_tin' => 'required',
-            'client_company' => 'required',
+            'client_email' => 'required'
         ]);
         $client->update($request->all());
 
         return redirect()->route('clients.index')
-            ->with('success', 'Project updated successfully');
+            ->with('success', 'Updated Client details successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $clientID
      * @return \Illuminate\Http\Response
      */
     public function destroy(Clients $client)

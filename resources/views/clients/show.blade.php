@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Client No: {{ $client->id }}</h2>
+                <h2> Client No: {{ $client->id}}</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('clients.index') }}" title="Go back"> <i
@@ -41,8 +41,14 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Company:</strong>
-                {{ $client->client_company }}
+                <strong>Email:</strong>
+                {{ $client->client_email }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Account Creation Date:</strong>
+                {{ $client->created_at }}
             </div>
         </div>
         

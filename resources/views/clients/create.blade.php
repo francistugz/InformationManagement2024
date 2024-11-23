@@ -52,8 +52,8 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Company:</strong>
-                    <input type="text" name="client_company" class="form-control" placeholder="Company">
+                    <strong>Email:</strong>
+                    <input type="text" name="client_email" class="form-control" placeholder="Email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

@@ -13,18 +13,24 @@
             </div>
         </div>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Date Issued:</strong>
+            {{ $invoice->Date}}
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
-                {{ $invoice->name }}
+                <strong>ClientID:</strong>
+                {{ $invoice->clientID }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Description:</strong>
-                {{ $invoice->description }}
+                <strong>Project No:</strong>
+                {{ $invoice->projectID }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -33,16 +39,11 @@
                 {{ $invoice->TotalDue }}
             </div>
         </div>
+        
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Project No:</strong>
-                {{ $invoice->project_id }}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Payment ID:</strong>
-                {{ $invoice->payments_id }}
+                <strong>Due Date:</strong>
+                {{ $invoice->DueDate }}
             </div>
         </div>
 

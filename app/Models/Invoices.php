@@ -17,12 +17,11 @@ class Invoices extends Model
     ];
 
     protected $fillable = [
-        'name',
-        'description',
+        'title',
         'DueDate',
         'Date',
         'TotalDue',
-        'project_id',
-        'payments_id'
+        'projectID',
+        'clientID'
     ];
 }

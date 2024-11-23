@@ -14,18 +14,18 @@ class CreateInvoiceTable extends Migration
     public function up()
     {
         Schema::create('invoices', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(1000);
+            $table->unsignedBigInteger('clientID')->nullable();
+            $table->unsignedBigInteger('projectID')->nullable();
             $table->timestamp('Date')->useCurrent();
-            $table->string('name', 255)->nullable();
-            $table->string('description', 255)->nullable();
+            $table->string('Title', 255)->nullable();
             $table->timestamp('DueDate')->useCurrent();
             $table->decimal('TotalDue', 22)->nullable()->default(0.00);
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->nullable();
-            $table->unsignedBigInteger('project_id');
-            $table->unsignedBigInteger('payments_id');
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
-            $table->foreign('payments_id')->references('id')->on('payments')->onDelete('cascade');
+            $table->timestamps();
+            
+        
+            $table->foreign('clientID')->references('id')->on('clients')->onDelete('cascade');
+            $table->foreign('projectID')->references('id')->on('projects')->onDelete('cascade');
         });
     }
     /**
