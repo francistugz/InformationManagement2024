@@ -28,7 +28,7 @@ Route::resource('clients', ClientsController::class);
 Route::resource('employees', EmployeeController::class);
 Route::resource('invoices', InvoicesController::class);
 Route::resource('payments', PaymentsController::class);
-Route::get('invoices/create/{projects}', [InvoicesController::class, 'create'])->name('invoices.create');
+
 
 
 

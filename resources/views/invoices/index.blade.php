@@ -19,8 +19,9 @@
     <table class="table table-bordered table-responsive-lg">
         <tr>
             <th>Invoice Number</th>
-            <th>Name</th>
-            <th>Description</th>
+            <th>Title</th>
+            <th>ClientID</th>
+            <th>projectID</th>
             <th>Total Due</th>
             <th>Due Date</th>
             <th width="280px">Action</th>
@@ -28,8 +29,9 @@
         @foreach ($invoices as $invoice)
             <tr>
                 <td>{{ $invoice->id }}</td>
-                <td>{{ $invoice->name }}</td>
-                <td>{{ $invoice->description }}</td>
+                <td>{{ $invoice->title }}</td>
+                <td>{{ $invoice->clientID }}</td>
+                <td>{{ $invoice->projectID }}</td>
                 <td>{{ $invoice->TotalDue }}</td>
                 <td>{{ date_format($invoice->created_at, 'jS M Y') }}</td>
                 <td>

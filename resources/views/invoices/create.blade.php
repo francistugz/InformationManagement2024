@@ -25,12 +25,15 @@
     <form action="{{ route('invoices.store') }}" method="POST" >
         @csrf
         
-        <input type="hidden" name="clientID" value="{{ $project->clientID }}">
-        <input type="hidden" name="projectID" value="{{ $project->id }}">
-        <input type="hidden" name="title" value="{{ $project->title }}">
-
+    
         <div class="col-xs-12 col-sm-12 col-md-12">
         
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Title:</strong>
+                    <input type="text" name="title" class="form-control" placeholder="Title">
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Total Due:</strong>

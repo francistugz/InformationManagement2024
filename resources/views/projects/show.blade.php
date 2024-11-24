@@ -52,7 +52,7 @@
     </div>
 
     <div class="pull-right">
-        <a class="btn btn-success" href="{{ route('invoices.create', ['project' => $project->id]) }}" title="Create invoice">
+        <a class="btn btn-success" href="{{ route('invoices.create') }}" title="Create invoice">
             <i class="fas fa-plus-circle"></i>
         </a>
     </div>

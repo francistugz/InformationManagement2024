@@ -18,7 +18,7 @@ class CreateInvoiceTable extends Migration
             $table->unsignedBigInteger('clientID')->nullable();
             $table->unsignedBigInteger('projectID')->nullable();
             $table->timestamp('Date')->useCurrent();
-            $table->string('Title', 255)->nullable();
+            $table->string('title', 255)->nullable();
             $table->timestamp('DueDate')->useCurrent();
             $table->decimal('TotalDue', 22)->nullable()->default(0.00);
             $table->timestamps();
