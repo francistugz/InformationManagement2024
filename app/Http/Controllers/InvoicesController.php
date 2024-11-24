@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Invoices;
-
+use App\Models\Project;
 class InvoicesController extends Controller
 {
     /**
@@ -25,9 +25,10 @@ class InvoicesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Project $project)
     {
-        return view('invoices.create');
+
+        return view('invoices.create', compact('project'));
     }
 
     /**
@@ -39,11 +40,7 @@ class InvoicesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'TotalDue' => 'required',
-            'project_id' => 'required',
-            'payments_id' => 'required'
+            'TotalDue' => 'required'
         ]);
 
         Invoices::create($request->all());

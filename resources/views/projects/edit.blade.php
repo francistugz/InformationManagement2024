@@ -29,17 +29,12 @@
         @method('PUT')
 
         <div class="row">
+            
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
-                    <input type="text" name="name" value="{{ $project->name }}" class="form-control" placeholder="Name">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Introduction:</strong>
-                    <textarea class="form-control" style="height:50px" name="introduction"
-                        placeholder="Introduction">{{ $project->introduction }}</textarea>
+                    <strong>Title:</strong>
+                    <textarea class="form-control" style="height:50px" name="title"
+                        placeholder="title">{{ $project->title }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -53,7 +48,7 @@
                 <div class="form-group">
                     <strong>Cost:</strong>
                     <input type="number" name="cost" class="form-control" placeholder="{{ $project->cost }}"
-                        value="{{ $project->location }}">
+                        value="{{ $project->cost }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

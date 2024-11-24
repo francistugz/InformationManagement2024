@@ -36,7 +36,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Location:</strong>
-                    <input type="text" name="location" class="form-control" placeholder="Location">
+                    <input type="text" name="location" class="form-control" placeholder="location">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

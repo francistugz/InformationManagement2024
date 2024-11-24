@@ -20,7 +20,6 @@ class CreatePaymentTable extends Migration
             $table->timestamp('date')->useCurrent();
             $table->string('method', 255)->nullable();
             $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->nullable();
         });
     }
     /**

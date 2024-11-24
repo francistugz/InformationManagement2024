@@ -24,37 +24,17 @@
     @endif
     <form action="{{ route('invoices.store') }}" method="POST" >
         @csrf
+        
+        <input type="hidden" name="clientID" value="{{ $project->clientID }}">
+        <input type="hidden" name="projectID" value="{{ $project->id }}">
+        <input type="hidden" name="title" value="{{ $project->title }}">
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Name:</strong>
-                    <input type="text" class="form-control" style="height:50px" name="name"
-                        placeholder="Introduction">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Description:</strong>
-                    <input type="text" name="description" class="form-control" placeholder="Description">
-                </div>
-            </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Total Due:</strong>
                     <input type="number" name="TotalDue" class="form-control" placeholder="Total Due">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Project ID:</strong>
-                    <input type="number" name="project_id" class="form-control" placeholder="Total Due">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Payment ID:</strong>
-                    <input type="number" name="payments_id" class="form-control" placeholder="Total Due">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

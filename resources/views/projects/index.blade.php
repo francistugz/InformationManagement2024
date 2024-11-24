@@ -20,7 +20,6 @@
         <tr>
             <th>No</th>
             <th>Name</th>
-            <th>Introduction</th>
             <th>Location</th>
             <th>Cost</th>
             <th>Date Created</th>
@@ -29,7 +28,7 @@
         @foreach ($projects as $project)
             <tr>
                 <td>{{ $project->id }}</td>
-                <td>{{ $project->name }}</td>
+                <td>{{ $project->title }}</td>
                 <td>{{ $project->location }}</td>
                 <td>{{ $project->cost }}</td>
                 <td>{{ date_format($project->created_at, 'jS M Y') }}</td>
@@ -62,7 +61,7 @@
 
     <center>
     <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('projects.invoicelink', $projects->id) }}"> <i class="fas fa-plus-circle"></i>
+                <a class="btn btn-success" href="{{ route('projects.create') }}"> <i class="fas fa-plus-circle"></i>
                     </a>
     </div>
 @endsection

@@ -21,6 +21,9 @@ class CreateProjectsTable extends Migration
             $table->decimal('cost', 22)->nullable()->default(0.00);
             $table->enum('project_status', ['ongoing', 'completed'])->default('ongoing');
             $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+
+            
 
             $table->foreign('clientID')->references('id')->on('clients')->onDelete('cascade');
 
