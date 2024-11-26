@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="container-fluid">
             <div class="pull-left">
                 <h2>Tugonon Construction Services and Supply </h2>
             </div>
@@ -16,15 +16,18 @@
         </div>
     @endif
 
-    <table class="table table-bordered table-responsive-lg">
-        <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Location</th>
-            <th>Cost</th>
-            <th>Date Created</th>
-            <th width="280px">Action</th>
-        </tr>
+<div class="container-fluid">
+
+        <table class="table table-bordered table-responsive-lg table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th style="width: 16%;">ID</th>
+                    <th style="width: 16%;">Title</th>
+                    <th style="width: 16%;">Location</th>
+                    <th style="width: 16%;">Cost</th>
+                    <th style="width: 16%;">Date Started</th>
+                    <th style="width: 16%;">Action</th>
+                </tr>
         @foreach ($projects as $project)
             <tr>
                 <td>{{ $project->id }}</td>
@@ -56,12 +59,7 @@
             </tr>
         @endforeach
     </table>
-
+</div>
     {!! $projects->links() !!}
 
-    <center>
-    <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('projects.create') }}"> <i class="fas fa-plus-circle"></i>
-                    </a>
-    </div>
 @endsection

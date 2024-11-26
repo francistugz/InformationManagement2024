@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Payment No: {{ $payment->id }}</h2>
+                <h3> Payment No: {{ $payment->id }}</h3>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('payments.index') }}" title="Go back"> <i

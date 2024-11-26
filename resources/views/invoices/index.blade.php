@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="container-fluid">
             <div class="pull-left">
                 <h2>Tugonon Construction Services and Supply </h2>
             </div>
@@ -16,16 +16,21 @@
         </div>
     @endif
 
-    <table class="table table-bordered table-responsive-lg">
-        <tr>
-            <th>Invoice Number</th>
-            <th>Title</th>
-            <th>ClientID</th>
-            <th>projectID</th>
-            <th>Total Due</th>
-            <th>Due Date</th>
-            <th width="280px">Action</th>
-        </tr>
+<div class="container-fluid">
+
+        <table class="table table-bordered table-responsive-lg table-hover">
+            <thead class="thead-dark">
+                <tr>
+        
+                    <th style="width: 14%;">ID</th>
+                    <th style="width: 14%;">Title</th>
+                    <th style="width: 14%;">clientID</th>
+                    <th style="width: 14%;">projectID</th>
+                    <th style="width: 14%;">Total Due</th>
+                    <th style="width: 14%;">Due Date</th>
+                    <th style="width: 25%;">Action</th>
+                </tr>
+            </thead>
         @foreach ($invoices as $invoice)
             <tr>
                 <td>{{ $invoice->id }}</td>
@@ -58,12 +63,7 @@
             </tr>
         @endforeach
     </table>
-    
-    <center>
-    <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('invoices.create') }}" title="Create a invoice"> <i class="fas fa-plus-circle"></i>
-                    </a>
-    </div>
+</div>    
     {!! $invoices->links() !!}
 
 @endsection

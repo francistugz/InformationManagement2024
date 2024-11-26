@@ -16,17 +16,24 @@
         </div>
     @endif
 
-    <table class="table table-bordered table-responsive-lg">
-        <tr>
-            <th>ID</th>
-            <th>Amount</th>
-            <th>Date</th>
-            <th>Method</th>
-            <th width="280px">Action</th>
-        </tr>
+<div class="container-fluid">
+
+        <table class="table table-bordered table-responsive-lg table-hover">
+            <thead class="thead-dark">
+                <tr>
+        
+                    <th style="width: 16%;">ID</th>
+                    <th style="width: 16%;">clientID</th>
+                    <th style="width: 16%;">Amount Paid</th>
+                    <th style="width: 16%;">Date Paid</th>
+                    <th style="width: 16%;">Method</th>
+                    <th style="width: 17%;">Action</th>
+                </tr>
+            </thead>
         @foreach ($payments as $payment)
             <tr>
-                <td>{{ ++$i }}</td>
+                <td>{{ $payment->id }}</td>
+                <td>{{ $payment->clientID }}</td>
                 <td>{{ $payment->amount }}</td>
                 <td>{{ $payment->date }}</td>
                 <td>{{ $payment->method }}</td>
@@ -55,11 +62,6 @@
             </tr>
         @endforeach
     </table>
-
+</div>
     {!! $payments->links() !!}
-    <center>
-    <div class="pull-right" >
-                <a class="btn btn-success" href="{{ route('payments.create') }}" title="Create a payment"> <i class="fas fa-plus-circle"></i>
-                    </a>
-            </div>
 @endsection

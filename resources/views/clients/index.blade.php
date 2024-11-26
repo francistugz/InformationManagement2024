@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="container-fluid">
             <div class="pull-left">
-                <h2>Tugonon Construction Services and Supply </h2>
+                <h3>Tugonon Construction Services and Supply </h3>
             </div>
             
         </div>
@@ -16,16 +16,21 @@
         </div>
     @endif
 
-    <table class="table table-bordered table-responsive-lg">
-        <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Contact Number</th>
-            <th>Tin</th>
-            <th>Email</th>
-            <th width="280px">Action</th>
-        </tr>
+<div class="container-fluid">
+
+    <table class="table table-bordered table-responsive-lg table-hover">
+        <thead class="thead-dark">
+            <tr>
+    
+            <th style="width: 14%;">ID</th>
+            <th style="width: 14%;">First Name</th>
+            <th style="width: 14%;">Last Name</th>
+            <th style="width: 14%;">Contact Number</th>
+            <th style="width: 14%;">Tin</th>
+            <th style="width: 14%;">Email</th>
+            <th style="width: 25%;">Action</th>
+            </tr>
+        </thead>
         @foreach ($clients as $client)
             <tr>
                 <td>{{ $client->id }}</td>
@@ -59,6 +64,7 @@
             </tr>
         @endforeach
     </table>
+</div>
 
     {!! $clients->links() !!}
     <center>

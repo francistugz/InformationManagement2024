@@ -16,10 +16,13 @@ class CreatePaymentTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('clientID')->nullable();
             $table->decimal('amount', 22)->nullable()->default(0.00);
             $table->timestamp('date')->useCurrent();
             $table->string('method', 255)->nullable();
             $table->timestamp('created_at')->useCurrent();
+
+            $table->foreign('clientID')->references('id')->on('clients')->onDelete('cascade');
         });
     }
     /**

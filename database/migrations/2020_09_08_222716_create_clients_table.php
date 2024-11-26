@@ -21,6 +21,7 @@ class CreateClientsTable extends Migration
             $table->string('client_tin', 255)->nullable();
             $table->string('client_email', 255)->nullable();
             $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
     /**

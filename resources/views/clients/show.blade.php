@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Client No: {{ $client->id}}</h2>
+                <h3> Client No: {{ $client->id}}</h3>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('clients.index') }}" title="Go back"> <i
@@ -52,4 +52,9 @@
             </div>
         </div>
         
+        <div class="pull-right">
+            <a href="{{ route('projects.create') }}" title="Create Project">
+                <i class="fas fa-plus-circle"></i>
+            </a>
+        </div>
 @endsection

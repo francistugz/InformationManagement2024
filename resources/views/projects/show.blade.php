@@ -8,7 +8,7 @@
     
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Project no: {{ $project->id }}</h2>
+                <h3>Project no: {{ $project->id }}</h3>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('projects.index') }}" title="Go back"> <i
@@ -52,7 +52,7 @@
     </div>
 
     <div class="pull-right">
-        <a class="btn btn-success" href="{{ route('invoices.create') }}" title="Create invoice">
+        <a href="{{ route('invoices.create', $project->id) }}" title="Create invoice">
             <i class="fas fa-plus-circle"></i>
         </a>
     </div>
